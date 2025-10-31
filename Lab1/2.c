@@ -1,6 +1,13 @@
 // COEN 146L : Lab 1 - template to use for file transfer (steps 1, 2, and 3)
 // You need to adapt this template according to the requirements of each of the steps
 
+		/*
+		Abhinav Pala
+		9-22-25
+		Lab 1-Task 2(First problem)
+		Description: This program copies the contents of one file to another file using C standard library functions.
+		*/
+
 #include <stdio.h>   // fprintf(), fread(), fwrite(), fopen(), fclose()
 #include <stdlib.h>  // malloc(), free()
 #include <pthread.h> // pthread_create()
@@ -42,7 +49,14 @@ int func_copy(char* src_filename, char* dst_filename) {
 	// closes dst file pointer
 	// frees memory used for buf
     
+			/*
+		Abhinav Pala
+		9-22-25
+		Lab 1-Task 1(First problem)
+		Description: This program copies the contents of one file to another file using C standard library functions.
+		*/
 
+		//MY CODE STARTS HERE
     while (fgets(buf, sizeof(buf), src_filename) != NULL)
     {
         fwrite(&buf, 1, sizeof(buf), dst_filename);
@@ -51,7 +65,7 @@ int func_copy(char* src_filename, char* dst_filename) {
     fclose(src_filename);
     fclose(dst_filename);
     free(buf);
-
+		//MY CODE ENDS HERE
 
 	return 0;
 }

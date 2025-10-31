@@ -1,0 +1,9 @@
+gcc templateFilesThreads.c
+./a.out src1.dat src2.dat src3.dat dst1.dat dst2.dat dst3.dat
+
+
+gcc templateSwitching.c
+./a.out 200 20 0.10 19
+
+gcc templatePNPersistence.c
+./a.out 6 

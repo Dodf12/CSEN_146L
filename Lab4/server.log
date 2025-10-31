@@ -1,0 +1,13 @@
+Waiting for packets to come.....
+HiPacket{ header: { len: 10 }, data: "Hello from" }
+	 Server sending Acknowled 
+HiPacket{ header: { len: 10 }, data: " client!
+T" }
+	 Server sending Acknowled 
+HiPacket{ header: { len: 10 }, data: "his is a t" }
+	 Server sending Acknowled 
+HiPacket{ header: { len: 10 }, data: "est file.
+" }
+	 Server sending Acknowled 
+HiPacket{ header: { len: 0 }, data: "" }
+	 Server sending Acknowled 

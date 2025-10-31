@@ -1,6 +1,14 @@
 // COEN 146L : Lab 1 - template to use for file transfer (steps 1, 2, and 3)
 // You need to adapt this template according to the requirements of each of the steps
 
+		/*
+		Abhinav Pala
+		9-22-25
+		Lab 1-Task 3(First problem)
+		Description: This program compares the time it takes to copy information from one file to another using the 
+		stdio.h and stdlib.h.
+		*/
+
 #include <stdio.h>   // fprintf(), fread(), fwrite(), fopen(), fclose()
 #include <stdlib.h>  // malloc(), free()
 #include <pthread.h> // pthread_create()
@@ -113,6 +121,15 @@ int syscall_copy(char* src_filename, char* dst_filename)  {
 
 // checks the runtime to copy a file using functions vs syscalls
 void check_copy_times(char* src_filename, char* dst_filename) {
+			/*
+		Abhinav Pala
+		9-22-25
+		Lab 1-Task 3(First problem)
+		Description: This program compares the time it takes to copy information from one file to another using the 
+		stdio.h and stdlib.h.
+		*/
+
+	//MY CODE STARTS HERE
 	clock_t func_start, func_end, syscall_start, syscall_end;
 	
 	// capture runtime of func_copy() using start clock, call the copy, end the clock
@@ -126,14 +143,16 @@ void check_copy_times(char* src_filename, char* dst_filename) {
 
 
 	// capture runtime of syscall_copy() using start clock, call the copy, end the clock
-	double syscall_time;
-  syscall_start = clock();
-	syscall_copy(src_filename,dst_filename);
-	syscall_end= clock();
-	syscall_time = (double) (syscall_end - syscall_start) / CLOCKS_PER_SEC;
+		double syscall_time;
+		syscall_start = clock();
+		syscall_copy(src_filename,dst_filename);
+		syscall_end= clock();
+		syscall_time = (double) (syscall_end - syscall_start) / CLOCKS_PER_SEC;
 
 	printf("time to copy using functions: %.7f\n", func_time);
 	printf("time to copy using syscalls: %.7f\n", syscall_time);
+
+	//MY CODE ENDS HERE
 }
 
 int main(int argc, char* argv[]) {
